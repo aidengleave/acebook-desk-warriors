@@ -15,7 +15,7 @@ services:
 deploy:
   provider: heroku
  api_key:
-  secure: "ENCRYPTED_KEY_HERE"
-app: heroku-app-name-here
+  secure: "18bcf4e8-e993-4fbb-961b-ad77b22c3ed9"
+app: acebook-team-desk-warriors
   on:
- repo: github-username-here/repo-name-here
+ repo: https://github.com/aidengleave/acebook-desk-warriors
