@@ -17,7 +17,7 @@ RSpec.feature "Post timestamp", type: :feature do
     fill_in "post[message]", :with => 'lots of shizzle me nizzle test message'
     click_button "Add post"
     expect(page).to have_content("shizzle me nizzle")
-    sleep 5
+    sleep(5)
     expect(page).to have_content("Just now")
   end
 
