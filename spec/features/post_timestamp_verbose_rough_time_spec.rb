@@ -10,7 +10,7 @@ RSpec.feature "Post timestamp", type: :feature do
     expect(page).to have_content("Add a new post")
   end
 
-  scenario "test that post shows 'Just now' if 5 secs has elapsed since post created" do
+  scenario "test that post shows Just now if 5 secs has elapsed since post created" do
     new_sign_up("easyname", "easyemail@easy.com", "abc123")
     expect(page.status_code).to eql 200
     expect(page).to have_content("Add a new post")
