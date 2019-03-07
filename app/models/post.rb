@@ -21,7 +21,7 @@ class Post < ApplicationRecord
       elapsed_time /= 3_600
       message = elapsed_time.to_s + " hour#{elapsed_time < 2 ? "" : "s"}  ago"
       return message
-    when elapsed_time < 604_800
+    when elapsed_time < 610_800
       elapsed_time /= 86_400
       message = elapsed_time.to_s + " day#{elapsed_time < 2 ? "" : "s"} ago"
       return message
