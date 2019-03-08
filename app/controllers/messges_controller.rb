@@ -2,7 +2,7 @@ class MessgesController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @messges = Messge.all
+    @messges = Messge.last(5)
     @messge = Messge.new
   end
 
