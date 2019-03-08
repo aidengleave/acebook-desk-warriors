@@ -14,8 +14,8 @@ class Post < ApplicationRecord
     when elapsed_time < 60
       return "Just now"
     when elapsed_time < 3_600
-      hrs = elapsed_time / 60
-      message = hrs.to_s + " minute#{elapsed_time < 2 ? "" : "s"}  ago"
+      whole_mins = elapsed_time / 60
+      message = whole_mins.to_s + " minute#{whole_mins < 2 ? "" : "s"}  ago"
       return message
     when elapsed_time < 86_400
       elapsed_time /= 3_600
