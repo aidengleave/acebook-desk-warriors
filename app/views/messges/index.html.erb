@@ -1,7 +1,7 @@
 
 
 
-<div class="well" id="chatbox" style="height:250px; width: 80%; border: solid 1px #222222; margin: 0 auto; background: white; overflow-y: scroll; ">
+<div class="well" id="chatbox" style="height:250px; width: 80%; border: solid 1px #222222; margin: 0 auto; margin-top: 75px; background: white; overflow-y: scroll; ">
   <% @messges.each do |messge| %>
      <%= render 'messges/messge', messge: messge %>
   <% end %>
