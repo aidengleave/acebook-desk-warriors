@@ -1,6 +1,6 @@
 class WallsController < ApplicationController
   def index
-    @walls = User.all
+    @walls = User.all.order("user_name")
   end
 
   def show
