@@ -37,7 +37,7 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
-    redirect_to posts_path, notice: 'Your post was deleted!'
+    redirect_back(fallback_location: wall_path(session[:wall_user_id]), notice: 'Your post was deleted!')  
   end
 
   def index
