@@ -10,9 +10,11 @@
   }
 </style>
 
+<% @wall_owner_name = User.find_by_id(session[:wall_user_id]) ? User.find_by_id(session[:wall_user_id]) : current_user %>
+
 <div class="container">
   <div class="col-md-6 mx-auto card">
-    <h2 style="text-align: center; margin-top: 10px; padding: 10px;">Add a new post</h2>
+    <h3 style="text-align: center; margin-top: 10px; padding: 10px;">Add a new post on <%= @wall_owner_name.user_name %>'s wall</h3>
     <%= form_for @post do |form| %>
       <%= form.text_area :message, class:"form-control", id:"exampleTextarea", rows:"3" %>
       <br>

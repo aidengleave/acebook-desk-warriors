@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  post 'messges', to:  'messges#create'
+
   delete 'posts/:id', to: 'posts#destroy', as: :delete_post
   get 'walls/index'
   get 'home/index'
@@ -8,6 +10,7 @@ Rails.application.routes.draw do
 
   resources :posts
   resources :walls
+  resources :messges
 
   root to: 'home#index'
 end

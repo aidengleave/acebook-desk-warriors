@@ -1,0 +1,18 @@
+
+
+
+<div class="well" id="chatbox" style="height:250px; width: 80%; border: solid 1px #222222; margin: 0 auto; margin-top: 75px; background: white; overflow-y: scroll; ">
+  <% @messges.each do |messge| %>
+     <%= render 'messges/messge', messge: messge %>
+  <% end %>
+
+</div>
+
+<%= form_with model: @messge do |f| %>
+  <div class="input-group mb-3" style="width: 80%; margin: 0 auto; margin-top: 10px;">
+    <%= f.text_field :body, placeholder: "post a message", class: "form-control" %>
+    <div class="input-group-append">
+      <%= f.submit "Send", class: "btn btn-primary " %>
+    </div>
+  </div>
+<% end %>

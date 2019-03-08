@@ -1,4 +1,6 @@
 class WallsController < ApplicationController
+  before_action :authenticate_user!
+  
   def index
     @walls = User.all.order("user_name")
   end

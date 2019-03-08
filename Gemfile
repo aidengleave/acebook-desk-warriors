@@ -7,6 +7,13 @@ end
 
 ruby '2.5.0'
 
+# For chatting
+gem 'bootstrap'
+gem 'jquery-rails'
+gem 'popper_js'
+gem 'tether-rails'
+gem 'simple_form'
+
 gem 'rake'
 gem 'rubocop'
 
