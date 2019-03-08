@@ -4,6 +4,17 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
   }
+  #bubbles{
+    color: white;
+    font-size: 20px;
+    padding: 40px;
+    border-width: 5px;
+  }
+  #ulist{
+    text-align: center;
+    list-style-type: none;
+    margin-right: 20px;
+  }
 </style>
 
 <div class="container">
@@ -11,9 +22,9 @@
     <div class="card mb-3">
       <h3 style="text-align: center;" class="card-header">Click on user to view their wall</h3>
       <div class="card-body">
-        <ul style="list-style-type: none;" >
+        <ul id="ulist">
           <% @walls.each do |wall| %>
-            <li style="font-size: 20px;"><%= link_to wall.user_name, wall_path(wall[:id]) %></li>
+            <li style="padding: 45px;"><%= link_to wall.user_name, wall_path(wall[:id]), id:"bubbles", class:"border bg-primary border-primary rounded-circle" %></li>
           <% end %>
         </ul>
       </div>
