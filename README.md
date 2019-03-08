@@ -9,8 +9,8 @@ Application deployed to [Heroku](https://acebook-team-desk-warriors.herokuapp.co
 # AceBook - Desk Warriors
 ```
                     _____|\
-               _.--| ADW |:     Acebook Desk Warriors
-              <____|.----||
+               _.--| ADW |:    Acebook Desk Warriors
+              <____|.----||       Desk is Diptis, AidEn, Sherif and Krzysztof
                      .---''---,
                       ;..__..'    _...
                     ,'/  ;|/..--''    \
@@ -24,7 +24,7 @@ Application deployed to [Heroku](https://acebook-team-desk-warriors.herokuapp.co
    ,'   `.     /   |`-:_ ; |    |  |  : \
    `--.   )   /|-._:    :          |   \ \
       /  /   :_|   ;`-._;   __..--';    : :
-     /  (    ;|;-./_  _/.-:'o |   /     ' |
+     /  (    ;|;-./_  _/.-:'o |   /     ' |  
     /  , \._/_/_./--''/_|:|___|_,'        |
    :  /   `'-'--'----'---------'          |
    | :     O ._O   O_. O ._O   O_.      ; ;
@@ -36,7 +36,9 @@ Application deployed to [Heroku](https://acebook-team-desk-warriors.herokuapp.co
        ~~~   ~~~   ~~~   ~~~
 
 ```
-# Here at Team Desk Warriors, we are dedicated to bringing you the finest 3rd party clones of highly copyright protected social media applications
+# Here at Team Desk Warriors, we fight for your online lives!
+
+We are dedicated to bringing you the finest 3rd party clones of highly copyright protected social media applications.
 
 With our latest offering @ceBook, we bring you the final word in user post interation with basic CRUD funtionality.
 
