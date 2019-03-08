@@ -10,9 +10,11 @@
   }
 </style>
 
+<% @wall_owner_name = User.find_by_id(session[:wall_user_id]) %>
+
 <div class="container">
   <div class="col-md-6 mx-auto card">
-    <h2 style="text-align: center; margin-top: 10px; padding: 10px;">Add a new post</h2>
+    <h3 style="text-align: center; margin-top: 10px; padding: 10px;">Add a new post on <%= @wall_owner_name.user_name %>'s wall</h3>
     <%= form_for @post do |form| %>
       <%= form.text_area :message, class:"form-control", id:"exampleTextarea", rows:"3" %>
       <br>
@@ -25,7 +27,7 @@
   <% @posts.each do |post| %>
   <div style="padding: 15px;" class="col-md-6 mx-auto card">
     <div id="opacity2" class="card mb-3">
-      <h3 class="card-header">Posted by: <%= post.user.user_name %> - <%= post.verbose_timestamp(post.created_at) %></h3>
+      <h3 class="card-header">Posted by: <%= post.user.user_name %> - on <%= post.updated_at.strftime("%b %d. %Y - %H:%M:%S") %></h3>
       <div class="card-body">
         <h5 class="card-title">Special title treatment</h5>
         <!-- <h6 class="card-subtitle text-muted">Support card subtitle</h6> -->
@@ -39,9 +41,6 @@
       <div class="card-footer text-muted">
         <% if post.can_edit(post.id, current_user.id)  %>
           <%= link_to 'Edit', edit_post_path(post), class:"btn btn-outline-primary", style:"float: right;" %>
-        <% end %>
-        <% if current_user.id == post.user_id || current_user.id.to_s == session[:wall_user_id]%>
-          <%= link_to 'Delete', delete_post_path(post), method: :delete %>
         <% end %>
       </div>
     </div>
