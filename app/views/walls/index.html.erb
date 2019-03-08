@@ -7,11 +7,16 @@
 </style>
 
 <div class="container">
-  <div class="col-md-6 mx-auto card">
-  <ul>
-    <% @walls.each do |wall| %>
-      <li><%= link_to wall.user_name, wall_path(wall[:id]) %></li>
-    <% end %>
-  </ul>
+  <div style="padding: 10px;" class="col-md-6 mx-auto">
+    <div class="card mb-3">
+      <h3 style="text-align: center;" class="card-header">Click on user to view their wall</h3>
+      <div class="card-body">
+        <ul style="list-style-type: none;" >
+          <% @walls.each do |wall| %>
+            <li style="font-size: 20px;"><%= link_to wall.user_name, wall_path(wall[:id]) %></li>
+          <% end %>
+        </ul>
+      </div>
+     </div>
   </div>
 </div>
